@@ -42,9 +42,9 @@ const errorPage = `
 // 6 - this will return a random number no bigger than `max`, as a string
 // we will also doing our query parameter validation here
 const getRandomNumberJSON = (max = 1) => {
-  max = Number(max);
-  max = !max ? 1 : max;
-  max = max < 1 ? 1 : max;
+  // max = Number(max);
+  // max = !max ? 1 : max;
+  // max = max < 1 ? 1 : max;
   const number = Math.random() * max;
   const responseObj = {
     timestamp: new Date(),
