@@ -1,10 +1,5 @@
 console.log('First web service starting up ...');
 
-const name = 'fred';
-const car = {
-  make: 'Ford',
-  make: 'Ford',
-};
 
 // 1 - pull in the HTTP server module
 const http = require('http');
@@ -73,11 +68,11 @@ const onRequest = (request, response) => {
   console.log('params=', params);
   console.log('max=', max);
 
-  if (pathname == '/') {
+  if (pathname === '/') {
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.write(indexPage);
     response.end();
-  } else if (pathname == '/random-number') {
+  } else if (pathname === '/random-number') {
     response.writeHead(200, { 'Content-Type': 'application/json' });
     response.write(getRandomNumberJSON(max));
     response.end();
