@@ -1,3 +1,4 @@
+
 //console.log('First web service starting up ...');
 
 const jsonHandler = require('./jsonResponses.js');
@@ -13,11 +14,13 @@ const query = require('querystring');
 // 3 - locally this will be 3000, on Heroku it will be assigned
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
+
 const urlStruct = {
   '/'               : htmlHandler.getIndexResponse,
   'random-number'   : jsonHandler.getRandomNumberResponse,
   notFound          : htmlHandler.getErrorResponse
 };
+
 
 // 6 - this will return a random number no bigger than `max`, as a string
 // we will also doing our query parameter validation here
@@ -53,6 +56,7 @@ const onRequest = (request, response) => {
  }else{
    urlStruct['notFound'](request,response,params);
  }
+
 };
 
 // 8 - create the server, hook up the request handling function, and start listening on `port`
