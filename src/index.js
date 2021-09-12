@@ -24,6 +24,17 @@ const urlStruct = {
 
 // 6 - this will return a random number no bigger than `max`, as a string
 // we will also doing our query parameter validation here
+const getRandomNumberJSON = (max = 1) => {
+  // max = Number(max);
+  // max = !max ? 1 : max;
+  // max = max < 1 ? 1 : max;
+  const number = Math.random() * max;
+  const responseObj = {
+    timestamp: new Date(),
+    number,
+  };
+  return JSON.stringify(responseObj);
+};
 
 // 7 - this is the function that will be called every time a client request comes in
 // this time we will look at the `pathname`, and send back the appropriate page
