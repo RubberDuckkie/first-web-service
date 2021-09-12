@@ -26,13 +26,13 @@ const errorPage = `
 </html>`;
 
 
-const getIndexResponse = (request, response, params) => {
+const getIndexResponse = (request, response) => {
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.write(indexPage);
     response.end();
 };
 
-const getErrorResponse = (request, response, params) => {
+const getErrorResponse = (request, response) => {
     response.writeHead(404, { 'Content-Type': 'text/html' });
     response.write(errorPage);
     response.end();
