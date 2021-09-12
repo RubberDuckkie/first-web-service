@@ -1,8 +1,8 @@
 
 //console.log('First web service starting up ...');
 
-const jsonHandler = require('./jsonResponses.js');
-const htmlHandler = require('./htmlResponses.js');
+const jsonHandler = require('./jsonResponses');
+const htmlHandler = require('./htmlResponses');
 
 // 1 - pull in the HTTP server module
 const http = require('http');
