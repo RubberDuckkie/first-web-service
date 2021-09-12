@@ -1,5 +1,4 @@
-const indexPage = 
-`
+const indexPage = `
 <html>
   <head>
     <title>Random Number Web Service</title>
@@ -25,17 +24,16 @@ const errorPage = `
   </body>
 </html>`;
 
-
 const getIndexResponse = (request, response, params) => {
-    response.writeHead(200, { 'Content-Type': 'text/html' });
-    response.write(indexPage);
-    response.end();
+  response.writeHead(200, { 'Content-Type': 'text/html' });
+  response.write(indexPage);
+  response.end();
 };
 
 const getErrorResponse = (request, response, params) => {
-    response.writeHead(404, { 'Content-Type': 'text/html' });
-    response.write(errorPage);
-    response.end();
+  response.writeHead(404, { 'Content-Type': 'text/html' });
+  response.write(errorPage);
+  response.end();
 };
 
 module.exports.getIndexResponse = getIndexResponse;

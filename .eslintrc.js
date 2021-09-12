@@ -17,5 +17,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "no-unused-vars" : "warn",
+        "no-param-reassign" : "warn",
+        "no-dupe-keys" : "warn"
     }
 };
